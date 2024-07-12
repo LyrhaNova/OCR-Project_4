@@ -1,172 +1,155 @@
-/*************************************************** GENERAL */
-
+.about-me__introduction p,
+.quote,
+.quote__text {
+  font-family: Spectral;
+  font-style: italic;
+}
+.nav a,
+.nav-pills .nav-link {
+  color: #000;
+}
+#contact,
+.quote,
 body {
-  max-width: 1920px;
   margin: auto;
 }
+#about,
+#contact {
+  padding-inline: 100px;
+  padding-block: 100px;
+}
+.picture.left::before,
+.picture.right::before {
+  content: " ";
+  width: 374px;
+  height: 329px;
+  bottom: 0;
+  z-index: -1;
+}
+.footer_infos,
+.service,
+.top-header {
+  display: flex;
+  background-color: #fff;
+}
+body {
+  max-width: 1920px;
+}
 * {
-  font-family: "Inter";
+  font-family: Inter;
   font-style: normal;
 }
-
 h1 {
   font-size: 26px;
 }
-
-h2 {
-  font-size: 28px;
-}
-
-.title {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  height: 145.58px;
-}
-
 .quote {
   width: 70%;
-  margin: auto;
-  margin-top: 3em;
-  /* padding-block: 3em; */
+  padding-block: 3em;
 }
 .quote__text {
-  font-family: "Spectral";
-  font-style: italic;
+  font-size: 2.5em;
   font-weight: 300;
-  /* font-size: 2.4rem; */
-  /* font-size: 38px; */
-  font-size: 2rem;
-  line-height: 3rem;
+  line-height: 1.2em;
 }
-
 .quote__author {
   font-family: Spectral;
   font-weight: 800;
   font-size: 22px;
 }
-
-/************************************************ HEADER NAV */
-
 .top-header {
-  background-color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
-  display: flex;
   justify-content: space-between;
   padding-inline: 100px;
   padding-block: 30px;
   align-items: center;
 }
-
+#about,
+#contact,
+#services,
+.item-column {
+  position: relative;
+}
 .nav ul {
   display: flex;
   list-style-type: none;
   font-size: 14px;
   margin-bottom: 0;
 }
-
 .nav li {
   padding-inline: 10px;
 }
-
 .nav a {
   text-decoration: none;
-  color: #000;
 }
-
 .social-link img {
   width: 20px;
 }
-
-/************************************************** A PROPOS */
-
 #about {
   display: flex;
   background-color: #f6d2b8;
-  justify-content: center;
-  /* padding-inline: 100px;
-  padding-block: 100px; */
-  position: relative;
 }
-
-.about-container {
-  display: flex;
-  align-items: center;
-  height: 654.75px;
-  width: 83%;
-}
-
-#about-me {
+#about-me,
+.form-container {
   flex: 2;
 }
-
-#about h2 {
-  font-size: 30px;
-}
-
 .picture {
   flex: 1;
   margin: 0 20px;
   z-index: 0;
 }
-
 .picture img {
   width: 100%;
 }
-
 .picture.left::before {
-  content: " ";
   background-color: #e5975f;
-  width: 374px;
-  height: 329px;
   position: absolute;
-  bottom: 0;
   left: 0;
-  z-index: -1;
 }
-
 .about-me__title {
   margin-top: 1em;
   margin-bottom: 60px;
+  font-size: 30px;
 }
-
-.about-me__introduction p {
-  font-family: "Spectral";
-  font-weight: 800;
-  font-style: italic;
-  font-size: 16px;
-  line-height: 19px;
+.about-me__introduction {
   width: 60%;
-  margin-bottom: 8px;
 }
-
+.about-me__introduction p {
+  font-weight: 800;
+  line-height: 19px;
+  font-size: 16px;
+  margin-bottom: 9px;
+}
 .about-me__text {
+  width: 80%;
   font-size: 14px;
 }
-
-/*************************************************** GALLERY */
-
-.gallery .nav-pills {
-  justify-content: center;
-  align-items: center;
+.form-container h2,
+.infos_list i,
+.title {
+  font-size: 28px;
 }
-
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
+.title {
+  text-align: center;
+  padding-block: 2em;
+}
+.gallery .nav {
+  justify-content: center;
+}
+.nav-pills .nav-link.active {
   color: #fff;
-  background-color: #beb45a;
+  background-color: #6d470d;
   border-radius: 0;
 }
-
-.nav-link {
-  color: #000;
+form input,
+form textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid;
+  margin-bottom: 20px;
 }
-
 .item-column {
-  position: relative;
   margin-bottom: 0 !important;
   padding: 0;
 }
@@ -182,8 +165,8 @@ h2 {
   object-fit: cover;
   padding: 0.5em;
 }
-.mg-prev,
-.mg-next {
+.mg-next,
+.mg-prev {
   width: 30px;
   height: 30px;
   justify-content: center;
@@ -191,15 +174,9 @@ h2 {
   display: flex;
   font-size: 24px;
 }
-
-/************************************************** SERVICES */
-
 #services {
-  margin-top: 4em;
   background-color: #a8d5d8;
-  position: relative;
 }
-
 #services .container::before {
   content: " ";
   background-color: #1c6474;
@@ -210,95 +187,76 @@ h2 {
   left: 0;
   z-index: 0;
 }
-
 #services .container {
   justify-content: space-between;
   display: flex;
   padding: 2em 0;
 }
-
 .service {
-  background-color: white;
   max-width: 390px;
   width: 30%;
   height: 337px;
   padding: 1em;
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 1;
 }
-
 .service__price {
   height: 61px;
 }
-/****************************************************** FORM */
-
-/* #contact {
-  display: flex;
-  margin-top: 4em;
-  background-color: #d8d3a8;
-  position: relative;
-  align-items: center;
-  height: 706.5px;
-} */
-
 #contact {
-  margin: auto;
   background-color: #d8d3a8;
-  position: relative;
-  padding-inline: 100px;
-  padding-block: 100px;
-  margin-top: 4em;
 }
-
-#contact h2 {
-  font-size: 28px;
-}
-
 #contact .container {
   display: flex;
 }
-
 .picture.right::before {
-  content: " ";
   background-color: #beb45a;
-  width: 374px;
-  height: 329px;
   position: absolute;
-  bottom: 0;
   right: 0;
-  z-index: -1;
-}
-.form-container {
-  flex: 2;
 }
 form {
   display: flex;
   flex-direction: column;
   width: 70%;
+  align-items: flex-start;
 }
-
 form input {
-  background-color: transparent;
-  border: solid 1px;
   height: 2.5em;
-  margin-bottom: 20px;
 }
-
 form textarea {
-  background-color: transparent;
-  border: solid 1px;
   height: 5em;
+  line-height: 2.5em;
   font-size: 1.2em;
-  margin-bottom: 20px;
 }
 input[type="submit"] {
   background-color: #beb45a;
+  padding: 0.5em 1em;
 }
-
-/********************************************** MEDIA QUERIES*/
-
+footer {
+  display: flex;
+  justify-content: center;
+}
+.footer_infos {
+  width: 55%;
+  height: 205px;
+  justify-content: space-between;
+}
+.footer_infos ul {
+  list-style-type: none;
+  width: 200px;
+  padding: 0;
+  margin: 0;
+}
+.infos_list {
+  text-align: center;
+  line-height: 25px;
+  font-size: 17px;
+  margin-top: 25px;
+}
+.infos_list i {
+  padding-bottom: 15px;
+}
 @media all and (max-width: 1180px) {
   .picture {
     flex: 2;
@@ -311,34 +269,38 @@ input[type="submit"] {
     margin-top: 0;
     margin-bottom: 1em;
   }
-
-  #about-me p {
+  .about-me__introduction,
+  .about-me__text {
     width: 100%;
   }
+  .footer_infos {
+    width: 80%;
+  }
 }
-
 @media all and (max-width: 1000px) {
-  #about {
+  .picture.left::before,
+  .picture.right::before {
+    height: 30%;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+  }
+  #about,
+  #contact .container,
+  #services .container {
     flex-direction: column;
   }
   .picture {
     width: 50%;
   }
   .picture.left::before {
-    width: 100%;
-    height: 30%;
-    position: absolute;
     bottom: auto;
     top: 0;
     left: 0;
-    z-index: -1;
   }
   .about-me__title {
     text-align: center;
     margin-top: 1em;
-  }
-  #services .container {
-    flex-direction: column;
   }
   .service {
     width: 100%;
@@ -349,7 +311,6 @@ input[type="submit"] {
   .service__description {
     margin-bottom: 1em;
   }
-
   #services .container::before {
     width: 30%;
     height: 100%;
@@ -358,24 +319,27 @@ input[type="submit"] {
     left: auto;
     z-index: 0;
   }
-
-  #contact .container {
-    flex-direction: column;
-  }
   #contact .picture.right {
     margin-top: 1em;
   }
   .picture.right::before {
-    width: 100%;
-    height: 30%;
-    position: absolute;
     bottom: 0;
     right: 0;
-    z-index: -1;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer_infos {
+    align-items: center;
+    flex-direction: column;
   }
 }
-
 @media all and (max-width: 650px) {
+  .quote__text {
+    font-size: 2em;
+  }
   .top-header {
     flex-direction: column;
     padding-inline: 0;
@@ -383,7 +347,7 @@ input[type="submit"] {
   .top-header .nav,
   .top-header .nav ul {
     width: 100%;
-    padding: 0 0 0 0;
+    padding: 0;
   }
   .top-header .nav li {
     flex: 1;
@@ -410,5 +374,8 @@ input[type="submit"] {
   }
   .picture {
     width: 80%;
+  }
+  .footer_infos ul {
+    width: 100px;
   }
 }
