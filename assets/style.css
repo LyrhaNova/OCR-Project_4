@@ -1,3 +1,24 @@
+#about,
+#contact .container,
+#services .container,
+.mg-next,
+.mg-prev,
+.nav ul,
+footer,
+form {
+  display: flex;
+}
+:focus-visible {
+  outline: #0099cc solid 2px;
+}
+.carousel-control-next:focus-visible,
+.carousel-control-prev:focus-visible {
+  outline: 0;
+  background: #09c;
+}
+input[type="submit"]:focus {
+  background-color: #09c;
+}
 .about-me__introduction p,
 .quote,
 .quote__text {
@@ -72,9 +93,8 @@ h1 {
   position: relative;
 }
 .nav ul {
-  display: flex;
   list-style-type: none;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 0;
 }
 .nav li {
@@ -87,7 +107,6 @@ h1 {
   width: 20px;
 }
 #about {
-  display: flex;
   background-color: #f6d2b8;
 }
 #about-me,
@@ -118,12 +137,12 @@ h1 {
 .about-me__introduction p {
   font-weight: 800;
   line-height: 19px;
-  font-size: 16px;
+  font-size: 17px;
   margin-bottom: 9px;
 }
 .about-me__text {
   width: 80%;
-  font-size: 14px;
+  font-size: 16px;
 }
 .form-container h2,
 .infos_list i,
@@ -171,7 +190,6 @@ form textarea {
   height: 30px;
   justify-content: center;
   align-items: center;
-  display: flex;
   font-size: 24px;
 }
 #services {
@@ -189,7 +207,6 @@ form textarea {
 }
 #services .container {
   justify-content: space-between;
-  display: flex;
   padding: 2em 0;
 }
 .service {
@@ -207,16 +224,12 @@ form textarea {
 #contact {
   background-color: #d8d3a8;
 }
-#contact .container {
-  display: flex;
-}
 .picture.right::before {
   background-color: #beb45a;
   position: absolute;
   right: 0;
 }
 form {
-  display: flex;
   flex-direction: column;
   width: 70%;
   align-items: flex-start;
@@ -234,7 +247,6 @@ input[type="submit"] {
   padding: 0.5em 1em;
 }
 footer {
-  display: flex;
   justify-content: center;
 }
 .footer_infos {

@@ -85,10 +85,10 @@ function createLightBox(e, t, a) {
 }
 function showItemTags(e, t, a) {
   var i =
-    '<li class="nav-item"><span class="nav-link active active-tag"  data-images-toggle="all">Tous</span></li>';
+    '<li class="nav-item"><span class="nav-link active active-tag" data-images-toggle="all" role="button" aria-pressed="true" tabindex="0">Tous</span></li>';
   $.each(a, function (e, t) {
-    i += `<li class="nav-item active">
-  <span class="nav-link"  data-images-toggle="${t}">${t}</span></li>`;
+    i += `<li class="nav-item">
+  <span class="nav-link" data-images-toggle="${t}" role="button" aria-pressed="false" tabindex="0">${t}</span></li>`;
   });
   var n = `<ul class="my-4 tags-bar nav nav-pills">${i}</ul>`;
   "bottom" === t
@@ -99,8 +99,10 @@ function showItemTags(e, t, a) {
 }
 function filterByTag() {
   if (!$(this).hasClass("active-tag")) {
-    $(".active-tag").removeClass("active active-tag"),
-      $(this).addClass("active active-tag");
+    $(".active-tag")
+      .removeClass("active active-tag")
+      .attr("aria-pressed", "false"),
+      $(this).addClass("active active-tag").attr("aria-pressed", "true");
     var e = $(this).data("images-toggle");
     $(".gallery-item").each(function () {
       $(this).parents(".item-column").hide(),
@@ -146,6 +148,28 @@ function filterByTag() {
       tagsPosition: "bottom",
       navigation: !0,
     }),
+    // (e.fn.mauGallery.listeners = function (t) {
+    //   e(".gallery-item").on("click", function () {
+    //     t.lightBox &&
+    //       "IMG" === e(this).prop("tagName") &&
+    //       e.fn.mauGallery.methods.openLightBox(e(this), t.lightboxId);
+    //   }),
+    //     e(".gallery").on("click", ".nav-link", function () {
+    //       e.fn.mauGallery.methods.filterByTag.call(this);
+    //     }),
+    //     e(".gallery").on("keydown", ".nav-link", function (e) {
+    //       if (e.key === "Enter" || e.key === " ") {
+    //         e.preventDefault();
+    //         e.fn.mauGallery.methods.filterByTag.call(this);
+    //       }
+    //     }),
+    //     e(".gallery").on("click", ".mg-prev", function () {
+    //       e.fn.mauGallery.methods.prevImage(t.lightboxId);
+    //     }),
+    //     e(".gallery").on("click", ".mg-next", function () {
+    //       e.fn.mauGallery.methods.nextImage(t.lightboxId);
+    //     });
+    // }),
     (e.fn.mauGallery.listeners = function (t) {
       e(".gallery-item").on("click", function () {
         t.lightBox &&
