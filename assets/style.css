@@ -29,6 +29,12 @@ input[type="submit"]:focus {
 .nav-pills .nav-link {
   color: #000;
 }
+.nav-link {
+  cursor: pointer;
+}
+.nav-link:hover {
+  background-color: #f6d2b8;
+}
 #contact,
 .quote,
 body {
@@ -183,6 +189,7 @@ form textarea {
   height: 100%;
   object-fit: cover;
   padding: 0.5em;
+  cursor: pointer;
 }
 .mg-next,
 .mg-prev {
