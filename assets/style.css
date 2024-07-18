@@ -9,7 +9,7 @@ form {
   display: flex;
 }
 :focus-visible {
-  outline: #0099cc solid 2px;
+  outline: #0099cc solid 4px;
 }
 .carousel-control-next:focus-visible,
 .carousel-control-prev:focus-visible {

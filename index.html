@@ -96,7 +96,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="preconnect" hrefs="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&family=Spectral:ital,wght@0,400;1,300;1,400;1,800&display=swap"
@@ -117,10 +117,10 @@
       <h1>Nina Carducci</h1>
       <nav class="nav">
         <ul>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#gallery">Galerie</a></li>
-          <li><a href="#services">Service</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" aria-label="Lien à propos">À propos</a></li>
+          <li><a href="#gallery" aria-label="Lien galerie">Galerie</a></li>
+          <li><a href="#services" aria-label="Lien services">Service</a></li>
+          <li><a href="#contact" aria-label="Lien contact">Contact</a></li>
           <li>
             <a
               href="https://www.instagram.com/ninacarducci.photo/?hl=fr"
@@ -239,57 +239,67 @@
         <div class="container py-3">
           <div class="gallery">
             <img
+              class="gallery-item"
+              tabindex="0"
               alt="Photo du concert d'Aaron Paul"
               data-gallery-tag="Concert"
-              class="gallery-item"
               src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp"
             />
             <img
+              class="gallery-item"
+              tabindex="0"
               alt="Photo professionnelle d'Ali Morshedlou"
               data-gallery-tag="Entreprises"
-              class="gallery-item"
               src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp"
             />
             <img
+              class="gallery-item"
+              tabindex="0"
               alt="Photo de Jason Goodman pour entreprise"
               data-gallery-tag="Entreprises"
-              class="gallery-item"
               src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp"
             />
             <img
+              class="gallery-item"
+              tabindex="0"
               alt="Photo du mariage de Hannah Busing, montrant les mains des mariés"
               data-gallery-tag="Mariages"
-              class="gallery-item"
               src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.webp"
             />
             <img
+              class="gallery-item"
+              tabindex="0"
               alt="Photo portrait d'Ade Tunji"
               data-gallery-tag="Portrait"
-              class="gallery-item"
               src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.webp"
             />
             <img
+              class="gallery-item"
+              tabindex="0"
               alt="Photo du mariage de Jakob Owens"
               data-gallery-tag="Mariages"
-              class="gallery-item"
               src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.webp"
             />
+
             <img
+              class="gallery-item"
+              tabindex="0"
               alt="Photo portrait de Nino Van Pratten"
               data-gallery-tag="Portrait"
-              class="gallery-item"
               src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.webp"
             />
             <img
+              class="gallery-item"
+              tabindex="0"
               alt="Photo du concert d'Austin Neill"
               data-gallery-tag="Concert"
-              class="gallery-item"
               src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.webp"
             />
             <img
+              class="gallery-item"
+              tabindex="0"
               alt="Photo d'entreprise de Mateus Campos Felipe"
               data-gallery-tag="Entreprises"
-              class="gallery-item"
               src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.webp"
             />
           </div>
@@ -303,7 +313,7 @@
             devenir une opinion. L’inexactitude n’existe pas en photographie.
             Toutes les photos sont exactes. Aucune d’elles n’est la vérité.
           </p>
-          <p class="quote__author">- Richard Avedon</p>
+          <cite class="quote__author">- Richard Avedon</cite>
         </blockquote>
       </div>
       <div id="services">
@@ -360,7 +370,7 @@
             exactement de révéler une vie
           </p>
         </blockquote>
-        <p class="quote__author">- Richard Avedon</p>
+        <cite class="quote__author">- Richard Avedon</cite>
       </div>
       <section id="contact">
         <div class="container">

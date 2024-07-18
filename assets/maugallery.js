@@ -69,13 +69,13 @@ function createLightBox(e, t, a) {
           <div class="modal-body">
               ${
                 a
-                  ? '<div class="mg-prev" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>'
+                  ? '<div class="mg-prev" tabindex="0" aria-label="Image précédente" style="cursor:pointer;position:absolute;top:50%;left:-15px;background:white;"><</div>'
                   : '<span style="display:none;" />'
               }
-              <img class="lightboxImage img-fluid" alt="Contenu de l'image affich\xe9e dans la modale au clique"/>
+              <img class="lightboxImage img-fluid" alt="Contenu de l'image affich\xe9e dans la modale au clique"/ tabindex="0">
               ${
                 a
-                  ? '<div class="mg-next" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>'
+                  ? '<div class="mg-next" tabindex="0" aria-label="Image suivante" style="cursor:pointer;position:absolute;top:50%;right:-15px;background:white;}">></div>'
                   : '<span style="display:none;" />'
               }
           </div>
@@ -88,7 +88,7 @@ function showItemTags(e, t, a) {
     '<li class="nav-item"><span class="nav-link active active-tag" data-images-toggle="all" role="button" aria-pressed="true" tabindex="0">Tous</span></li>';
   $.each(a, function (e, t) {
     i += `<li class="nav-item">
-  <span class="nav-link" data-images-toggle="${t}" role="button" aria-pressed="false" tabindex="0">${t}</span></li>`;
+  <span class="nav-link" data-images-toggle="${t}" role="button" aria-pressed="false" tabindex="0" aria-label="{Sélectionner le filtre}">${t}</span></li>`;
   });
   var n = `<ul class="my-4 tags-bar nav nav-pills">${i}</ul>`;
   "bottom" === t
@@ -148,74 +148,74 @@ function filterByTag() {
       tagsPosition: "bottom",
       navigation: !0,
     }),
-    // (e.fn.mauGallery.listeners = function (t) {
-    //   e(".gallery-item").on("click", function () {
-    //     t.lightBox &&
-    //       "IMG" === e(this).prop("tagName") &&
-    //       e.fn.mauGallery.methods.openLightBox(e(this), t.lightboxId);
-    //   }),
-    //     e(".gallery").on("click", ".nav-link", function () {
-    //       e.fn.mauGallery.methods.filterByTag.call(this);
-    //     }),
-    //     e(".gallery").on("keydown", ".nav-link", function (e) {
-    //       if (e.key === "Enter" || e.key === " ") {
-    //         e.preventDefault();
-    //         e.fn.mauGallery.methods.filterByTag.call(this);
-    //       }
-    //     }),
-    //     e(".gallery").on("click", ".mg-prev", function () {
-    //       e.fn.mauGallery.methods.prevImage(t.lightboxId);
-    //     }),
-    //     e(".gallery").on("click", ".mg-next", function () {
-    //       e.fn.mauGallery.methods.nextImage(t.lightboxId);
-    //     });
-    // }),
     (e.fn.mauGallery.listeners = function (t) {
       e(".gallery-item").on("click", function () {
-        t.lightBox &&
-          "IMG" === e(this).prop("tagName") &&
+        if (t.lightBox && "IMG" === e(this).prop("tagName")) {
           e.fn.mauGallery.methods.openLightBox(e(this), t.lightboxId);
-      }),
-        e(".gallery").on("click", ".nav-link", function () {
+        }
+      });
+      e(".gallery-item").on("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          if (t.lightBox && "IMG" === e(this).prop("tagName")) {
+            e.fn.mauGallery.methods.openLightBox(e(this), t.lightboxId);
+          }
+        }
+      });
+      e(".gallery").on("click", ".nav-link", function () {
+        e.fn.mauGallery.methods.filterByTag.call(this);
+      });
+      e(".gallery").on("keydown", ".nav-link", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
           e.fn.mauGallery.methods.filterByTag.call(this);
-        }),
-        e(".gallery").on("click", ".mg-prev", function () {
+        }
+      });
+      e(".gallery").on("click", ".mg-prev", function () {
+        e.fn.mauGallery.methods.prevImage(t.lightboxId);
+      });
+      e(".gallery").on("keydown", ".mg-prev", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
           e.fn.mauGallery.methods.prevImage(t.lightboxId);
-        }),
-        e(".gallery").on("click", ".mg-next", function () {
+        }
+      });
+      e(".gallery").on("click", ".mg-next", function () {
+        e.fn.mauGallery.methods.nextImage(t.lightboxId);
+      });
+      e(".gallery").on("keydown", ".mg-next", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
           e.fn.mauGallery.methods.nextImage(t.lightboxId);
-        });
-    }),
-    (e.fn.mauGallery.methods = {
-      createRowWrapper: function (e) {
-        createRowWrapper(e);
-      },
-      wrapItemInColumn: function (e, t) {
-        wrapItemInColumn(e, t);
-      },
-      moveItemInRowWrapper: function (e) {
-        moveItemInRowWrapper(e);
-      },
-      responsiveImageItem: function (e) {
-        responsiveImageItem(e);
-      },
-      openLightBox: function (e, t) {
-        openLightBox(e, t);
-      },
-      prevImage: function (e) {
-        prevImage(e);
-      },
-      nextImage: function (e) {
-        nextImage(e);
-      },
-      createLightBox: function (e, t, a) {
-        createLightBox(e, t, a);
-      },
-      showItemTags: function (e, t, a) {
-        showItemTags(e, t, a);
-      },
-      filterByTag: function () {
-        filterByTag.call(this);
-      },
+        }
+      });
     });
+  e.fn.mauGallery.methods = {
+    createRowWrapper: function (e) {
+      createRowWrapper(e);
+    },
+    wrapItemInColumn: function (e, t) {
+      wrapItemInColumn(e, t);
+    },
+    moveItemInRowWrapper: function (e) {
+      moveItemInRowWrapper(e);
+    },
+    responsiveImageItem: function (e) {
+      responsiveImageItem(e);
+    },
+    openLightBox: function (e, t) {
+      openLightBox(e, t);
+    },
+    prevImage: function (e) {
+      prevImage(e);
+    },
+    nextImage: function (e) {
+      nextImage(e);
+    },
+    createLightBox: function (e, t, a) {
+      createLightBox(e, t, a);
+    },
+    showItemTags: function (e, t, a) {
+      showItemTags(e, t, a);
+    },
+    filterByTag: function () {
+      filterByTag.call(this);
+    },
+  };
 })(jQuery);
