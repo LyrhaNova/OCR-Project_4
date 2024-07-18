@@ -10,7 +10,7 @@ Dans le cadre de la formation OpenClassRooms en Développement web, le ``PROJET 
 - 📄 [Scénario](#scenario)
 - ⬆️ [Objectifs pédagogiques](#objectifs-pedagogiques)
 - 🚀 [Installation](#installation)
-- 📚 [Résumé des actions](#résumé-des-implémentations-majeurs-réalisées)
+- 📚 [Résumé des implémentations](#résumé-des-implémentations-majeurs-réalisées)
 - 📈 [Score Lighthouse](#score-lighthouse)
 - 📖 [Rapport d'intervention](#rapport-dintervention)
 - 🏗️ [Construit avec](#construit-avec)
