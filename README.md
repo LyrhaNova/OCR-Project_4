@@ -63,7 +63,7 @@ git pull origin main
 
 Vous devriez maintenant avoir accès au projet (corrigé) dans votre dépôt local.
 
-## Résumé des actions importantes réalisées
+## RÉSUMÉ DES ACTIONS IMPORTANTES RÉALISÉES
 
 ### HTML -
 
@@ -88,7 +88,7 @@ Vous devriez maintenant avoir accès au projet (corrigé) dans votre dépôt loc
 - Correction des problématiques JS (filtres & galerie)
 - Ajout d'event "keydown" pour la navigation au clavier de la galerie & ARIA
 
-## Score Lighthouse
+## SCORE LIGHTHOUSE
 
 | Optimisation       | Performance | Accessibility | Best Practices | SEO |
 |--------------------|-------------|---------------|----------------|-----|
@@ -112,6 +112,6 @@ _Selon le cadre d'utilisation de l'outil, les résultats seront proches sans tou
 | ``VISUAL STUDIO CODE`` | _IDE_                                          |
 | ``GIT``                | _Logiciel de gestion de versions_              |
 | ``Wave``               | _Extension Google d'évaluation d'accessibilité_|
-| ``HeadingsMap``        | _Extension navigateur d'évaluation de structuration du DOM_
+| ``HeadingsMap``        | _Extension navigateur d'évaluation de structuration du DOM_                                                                      |
 | ``Google Rich Snippet``| _Outil de Google pour obtenir des résultats enrichis_ |
 | ``Lighthouse``         | _Outil de mesure sur la qualité des pages Web_ |
