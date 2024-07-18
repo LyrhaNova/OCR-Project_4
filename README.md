@@ -10,8 +10,9 @@ Dans le cadre de la formation OpenClassRooms en Développement web, le ``PROJET 
 - 📄 [Scénario](#scenario)
 - ⬆️ [Objectifs pédagogiques](#objectifs-pedagogiques)
 - 🚀 [Installation](#installation)
-- 📚 [Résumé des actions](#résumé-des-actions-importantes-réalisées)
+- 📚 [Résumé des actions](#résumé-des-implémentations-majeurs-réalisées)
 - 📈 [Score Lighthouse](#score-lighthouse)
+- 📖 [Rapport d'intervention](#rapport-dintervention)
 - 🏗️ [Construit avec](#construit-avec)
 
 ## SCENARIO
@@ -63,7 +64,7 @@ git pull origin main
 
 Vous devriez maintenant avoir accès au projet (corrigé) dans votre dépôt local.
 
-## RÉSUMÉ DES ACTIONS IMPORTANTES RÉALISÉES
+## RÉSUMÉ DES IMPLÉMENTATIONS MAJEURS RÉALISÉES
 
 ### HTML -
 
@@ -87,15 +88,20 @@ Vous devriez maintenant avoir accès au projet (corrigé) dans votre dépôt loc
 - Optimisation et factorisation du JS
 - Correction des problématiques JS (filtres & galerie)
 - Ajout d'event "keydown" pour la navigation au clavier de la galerie & ARIA
-
+  
 ## SCORE LIGHTHOUSE
 
-| Optimisation       | Performance | Accessibility | Best Practices | SEO |
-|--------------------|-------------|---------------|----------------|-----|
-| Après Optimisation | 99          | 100           | 100            | 100 |
-| Avant Optimisation | 65          | 68            | 100            | 70  |
+Score avant optimisation :\
+![Score_before](https://raw.githubusercontent.com/LyrhaNova/OCR-Project_4/main/assets/docs/lighthouse_before.png)
+
+Score après optimisation :\
+![Score_after](https://raw.githubusercontent.com/LyrhaNova/OCR-Project_4/main/assets/docs/lighthouse_after.png)
 
 _Selon le cadre d'utilisation de l'outil, les résultats seront proches sans toutefois correspondre exactement, notamment sur les performances._
+
+## RAPPORT D'INTERVENTION
+
+[Lien vers le rapport complet](https://github.com/LyrhaNova/OCR-Project_4/blob/main/assets/docs/Rapport_Complet_072024.pdf)
 
 ## CONSTRUIT AVEC
 
