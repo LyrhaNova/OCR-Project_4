@@ -14,6 +14,7 @@ Dans le cadre de la formation OpenClassRooms en Développement web, le ``PROJET 
 - 📈 [Score Lighthouse](#score-lighthouse)
 - 📖 [Rapport d'intervention](#rapport-dintervention)
 - 🏗️ [Construit avec](#construit-avec)
+- 🖼 [Galerie d'images](#galerie-dimages)
 
 ## SCENARIO
 
@@ -118,6 +119,14 @@ _Selon le cadre d'utilisation de l'outil, les résultats seront proches sans tou
 | ``VISUAL STUDIO CODE`` | _IDE_                                          |
 | ``GIT``                | _Logiciel de gestion de versions_              |
 | ``Wave``               | _Extension Google d'évaluation d'accessibilité_|
-| ``HeadingsMap``        | _Extension navigateur d'évaluation de structuration du DOM_                                                                      |
+| ``HeadingsMap``        | _Extension navigateur d'évaluation de structuration du DOM_ |
 | ``Google Rich Snippet``| _Outil de Google pour obtenir des résultats enrichis_ |
 | ``Lighthouse``         | _Outil de mesure sur la qualité des pages Web_ |
+
+## Galerie d'images
+
+![Capture 1](https://i.imgur.com/3QMWJQo.png)
+
+![Capture 2](https://i.imgur.com/INc6xVm.png)
+
+![Capture 3](https://i.imgur.com/V2A3WL1.png)
